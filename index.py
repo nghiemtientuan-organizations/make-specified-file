@@ -23,27 +23,27 @@ def create_file(filename, type='txt', size=0):
         'txt': create_file_text(filename, size),
 
         # shel run
-        'exe': 'exe',
+        'exe': False,
 
         # image
-        'jpg': 'jpg',
-        'png': 'png',
-        'jpeg': 'jpeg',
+        'jpg': False,
+        'png': False,
+        'jpeg': False,
 
         # excel
-        'xls': 'xls',
-        'xlsx': 'xlsx',
+        'xls': False,
+        'xlsx': False,
 
         # word
-        'doc': 'doc',
-        'docx': 'docx',
+        'doc': False,
+        'docx': False,
 
         # pdf
-        'pdf': 'pdf',
+        'pdf': False,
 
         # PowerPoint
-        'ppt': 'ppt',
-        'pptx': 'pptx',
+        'ppt': False,
+        'pptx': False,
     }
 
     status = file_types.get(type, 'extension_not_support')
