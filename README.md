@@ -9,3 +9,8 @@ source venv/bin/activate
 
 make requirements
 ```
+
+# Run
+```
+python3 index.py (fileName) [fileExtension] [fileSize]
+```
