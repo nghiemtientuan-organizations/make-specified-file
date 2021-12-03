@@ -1,6 +1,6 @@
 import sys
 from core.text import create_file_text
-from core.const import output_path
+from core.const import output_path, convert_bytes, file_size
 
 
 def create_file(filename, type='txt', size=0):
@@ -48,8 +48,14 @@ def create_file(filename, type='txt', size=0):
 
     status = file_types.get(type, 'extension_not_support')
     if status is True:
+        file_path = output_path(filename, type)
+        size = file_size(file_path)
         print('Create file success!!')
-        print('File path: {}'.format(output_path(filename, type)))
+        print('File path: {}'.format(file_path))
+        print('File size: {} ({} bytes)'.format(
+            convert_bytes(size),
+            size
+        ))
     elif status == 'extension_not_support':
         print('[Notify] error: File extension is not support')
     else:
